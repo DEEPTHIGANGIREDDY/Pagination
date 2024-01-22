@@ -20,23 +20,6 @@ const PaginationComp = () => {
   const indexofFirstItem = indexofLastItem - itemsPerPage;
   const currentItems = data.slice(indexofFirstItem, indexofLastItem);
 
-//   const renderPageNumber = pages.map((number) => {
-//     if (number<maxPageNumberLimit+1 && number>minPageNumberLimit) {
-//         return (
-//             <li
-//               key={number}
-//               id={number}
-//               onClick={() => setCurrentPage(number)}
-//               className={currentPage === number ? "active" : ""}
-//             >
-//               {number}
-//             </li>
-//           );
-//     }else{
-//         return null
-//     }
-//   });
-
 const renderPageNumber = pages.map((number) => {
     if (number <= maxPageNumberLimit && number >= minPageNumberLimit) {
       return (
